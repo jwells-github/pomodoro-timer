@@ -1,5 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="pomodoro.css">
+</head>
 <body>
-    <h1>Timer</h1>
+    <h1>Pomodoro Timer</h1>
     <div class="time-picker">
         <h3>Session Time</h3>
         <div id="session-time">25</div>
@@ -12,9 +15,12 @@
         <button onClick="incrementBreak(1)">^</button>
         <button onClick="incrementBreak(-1)">v</button>
     </div>
-    <div id="timer"></div>
-    <button id="start-button" onClick="start()">Start</button>
-    <button onClick="reset()">Reset</button>
+    <div id="timer">25:00</div>
+    <div class="controls">
+            <button id="start-button" onClick="start()">Start</button>
+            <button onClick="reset()">Reset</button>
+    </div>
+
     
 <script src="pomodoro.js"></script>
 </body>

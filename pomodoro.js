@@ -83,6 +83,11 @@ function incrementSession(incrementBy){
         else if (sessionMinutes > 99){
             sessionMinutes = 99;
         }
+        if(!timerStarted && Session){
+            minutes = sessionMinutes;
+            seconds = sessionSeconds;
+            writeTime();
+        }
         document.getElementById("session-time").innerHTML = sessionMinutes;
 
    
@@ -94,6 +99,11 @@ function incrementBreak(incrementBy){
     }
     else if (breakMinutes > 99){
         breakMinutes = 99;
+    }
+    if(!timerStarted && !Session){
+        minutes = breakMinutes;
+        seconds = breakSeconds;
+        writeTime();
     }
     document.getElementById("break-time").innerHTML = breakMinutes;
 }
